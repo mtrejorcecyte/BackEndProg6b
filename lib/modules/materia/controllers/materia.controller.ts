@@ -19,8 +19,25 @@ export class MateriaController {
         .catch(error =>{
             res.status(400).json({
                 ok: false,
-                error,
+                error: error.name,
                 message: 'Materia no creada'
+            });
+        });
+    }
+
+    obtenerMaterias = (req: Request, res: Response) => {
+        Materia.find()
+        .then(materias => {
+            res.status(200).json({
+                ok: true,
+                materias: materias
+            });
+        })
+        .catch(error => {
+            res.status(400).json({
+                ok: false,
+                error: error.name,
+                message: error.message
             });
         });
     }

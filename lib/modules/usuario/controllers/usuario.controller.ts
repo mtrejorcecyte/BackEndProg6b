@@ -32,7 +32,7 @@ export class UsuarioController {
     obtenerUsuarios = (req: Request, res: Response) => { 
         Usuario.find()
         .then(usuarios => {
-            res.status(201).json(
+            res.status(200).json(
                 {
                     ok: true,
                     usuarios: usuarios
