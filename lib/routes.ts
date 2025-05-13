@@ -1,4 +1,4 @@
-import { MateriaRoutes } from "modules/materia/routes/materia.routes";
+import { MateriaRoutes } from "./modules/materia/routes/materia.routes";
 import { UsuarioRoutes } from "./modules/usuario/routes/usuario.routes";
 
 export class Routes {
